@@ -1,11 +1,12 @@
-# Docker Image Inspector
+# DockerLens
 
-A simple Go utility to inspect Docker images and gather useful metadata, including:
+A simple Go utility to inspect Docker images and gather useful metadata for vulnerability management, including:
 
-- Base Docker Image
+- Base Docker Image (WIP)
 - Python Version (if available)
 - Pip Version (if available)
 - Size of the Docker Image
+- Layers (WIP)
 
 ## Prerequisites
 
@@ -17,14 +18,14 @@ A simple Go utility to inspect Docker images and gather useful metadata, includi
 1. Clone the repository:
 
 ```
-git clone https://github.com/yourusername/docker-image-inspector.git
-cd docker-image-inspector
+git clone https://github.com/yourusername/DockerLens.git
+cd DockerLens
 ```
 
 2. Build the utility:
 
 ```
-go build -o docker-image-inspector
+go build -o dockerlens
 ```
 
 ## Usage
@@ -32,17 +33,18 @@ go build -o docker-image-inspector
 Run the utility from the terminal:
 
 ```
-./docker-image-inspector
+./dockerlens
 ```
 
 You will be prompted to enter the Docker image name. Example:
 
 ```
-Enter Docker image name: python:3.9-slim
+Enter Docker image name: python
 
-Docker Image Inspector
+DockerLens - Docker Image Inspector
+
 Property              Value
-Image                 python:3.9-slim
+Image                 python
 Size                  300MB
 Base Image            debian:buster-slim
 Python Version        Python 3.9.7
